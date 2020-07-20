@@ -12,7 +12,7 @@ def intersection(arrays):
     for key, value in num_intersection.items():
         if value == len(arrays):
             result.append(key)
-
+    print(num_intersection)
     return result
 
 
