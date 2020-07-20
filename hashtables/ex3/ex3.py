@@ -3,6 +3,15 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    num_intersection = {x: 1 for x in arrays[0]}
+    result = []
+    for i in range(1, len(arrays)):
+        for num in arrays[i]:
+            if num in num_intersection:
+                num_intersection[num] += 1
+    for key, value in num_intersection.items():
+        if value == len(arrays):
+            result.append(key)
 
     return result
 
